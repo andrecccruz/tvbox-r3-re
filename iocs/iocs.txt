@@ -1,0 +1,92 @@
+# Indicadores de Comprometimento (IoCs) — TV Box Allwinner H313 "R3"
+# Coletados em 2026-10-24/25. Fonte: strings de APKs e conexões observadas no aparelho.
+# Uso: bloqueio em roteador/firewall, enriquecimento de regras, denúncia a provedores de abuse.
+# Atenção: infraestrutura de rotação — domínios/IPs podem mudar. Nada aqui prova autoria.
+
+## Domínios — comando e controle / dropper (Cluster A)
+dnsyc.top
+heartbeat.dnsyc.top
+business.dnsyc.top
+dns.dnsyc.top
+sub.dnsyc.top
+imptor.top
+v105.imptor.top
+0czd47.imptor.top
+4irosp.imptor.top
+akrdinfo.cn
+
+## Domínios — telemetria / OTA / instalação silenciosa (Cluster B)
+tentvs.com
+mytvos.com
+shortv.net
+boxstv.com
+tvsetting.com
+longott.com
+long.tv
+adtvbox.com
+
+## Domínios — proxy residencial Honeygain (Cluster D, rotativos)
+xepith.com
+upiral.com
+nagopore.com
+fepoth.com
+thewsoral.com
+crowsember.com
+
+## Domínio — utilitário/API auxiliar
+apiopen.top
+
+## IPs — C2 do dropper (Cluster A, Alibaba US / Los Angeles)
+47.251.5.25
+47.251.105.207
+47.251.69.129
+47.251.54.180
+
+## IPs — telemetria/OTA (Cluster B, FDCservers)
+216.227.189.9
+216.227.189.175
+23.237.233.166
+67.159.17.132
+
+## IPs — nós de proxy CastarSDK (Cluster C)
+207.166.164.30
+43.130.3.96
+101.32.166.132
+43.102.213.193
+43.102.65.55
+
+## Faixas — proxy Honeygain (Cluster D, DataPacket/Datacamp, São Paulo)
+152.233.84.0/24
+95.177.96.0/24
+
+## Pacotes Android maliciosos
+com.android.netservice
+com.android.domain
+com.android.assistant.setting.iknew
+com.hopper.rsshub.stb
+com.lssa.service
+com.systemguard.android
+com.core.rss
+com.charon.rocketfly
+com.ik.TV_Stick
+com.android.nfx
+
+## SHA-256 — APKs maliciosos
+33feb99dfca28f97aed5ef1cbcb1c9ebfe215fcb8c54c56cd79a7efcfac1e77f  com.android.netservice
+5b029abe4ad2cd6dfa18064899b50190e00ce0f50bac57cbd849502ab3108f30  com.android.domain
+54a9649ce848be2b29967179d462f8a6a6f5023498c1a9731101addff4c9aa96  com.android.assistant.setting.iknew
+e795f898552ca40c06ecf31330918d803793003da0aa6d69260a4536db7b5519  com.hopper.rsshub.stb
+a0113e5c2670c118067568f3cf24871f747efb98f08771baca8652b51b133a49  com.lssa.service
+579d07eb81f22e665abd9ae87f6b8738dbeb28d2feb771d4f443b57e8f600549  com.systemguard.android
+d070fd928b8ae06e6532232904c6bbac0bdc21ce078e90295c5c1cbc11de5e97  com.core.rss
+8da1a29167d75c163d5052b4d9827532fbab17f027a7d9eaa28c23bbd3a47e68  com.charon.rocketfly
+45f46ebc4ac4930bd578935d5673adc92a7ff7904e025f8e208532188911de59  com.ik.TV_Stick
+2ab0c4a55d689ef6a7c83ca42be1e18cf1571bc6b6804d199cd180bcf5bf145c  com.android.nfx
+
+## SHA-256 — binário nativo (su daemon de fábrica)
+a7ca20c61f5a13d85bbd607e84edc6600f880a3bad7daaf34267eccdb98f731d  /system/bin/qw
+
+## Resolvedores DoH embutidos (abusados para contornar bloqueio por DNS no roteador)
+doh.pub
+dns.alidns.com
+cloudflare-dns.com

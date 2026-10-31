@@ -1,0 +1,30 @@
+# Artefatos que NÃO devem ir ao repositório público
+# (identificadores únicos do aparelho e amostras de malware vivo)
+
+# Imagens de partição / backups do eMMC
+backup/
+*.img
+*.img.zst
+*.img.gz
+*.bin
+
+# Amostras de malware
+amostras/
+*.apk
+*.apkm
+*.odex
+*.vdex
+*.dex
+
+# Logs brutos do aparelho (serial, MACs, contas)
+logs/
+*.log
+dmesg.txt
+logcat.txt
+
+# Diversos
+.DS_Store
+*.swp
+*~
+venv/
+__pycache__/
